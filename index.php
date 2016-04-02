@@ -24,25 +24,25 @@ $font_family = pick_random( $fonts );
 $font_size = rand( 25, 100 );
 $style = pick_random( $styles );
 
-$index = array_rand( $fragments );
-$sentence = 'Donald Trump ' . $fragments[ $index ] . '.';
+// $index = array_rand( $fragments );
+// $sentence = 'Donald Trump ' . $fragments[ $index ] . '.';
 
-$trump_sentence = pick_random( $subjects ) . " " . pick_random( $verbs ) . " " . pick_random( $objects ) . ".";
+// $trump_sentence = pick_random( $subjects ) . " " . pick_random( $verbs ) . " " . pick_random( $objects ) . ".";
 
 // Complex sentences $subject . $verb . $qty . $adj . $object
 $subj = pick_random( $subjects );
-$verb = pick_random( $verbs );
-$qty = pick_random( $quantities );
+//$verb = pick_random( $verbs );
+//$qty = pick_random( $quantities );
 $adj = pick_random( $adjectives );
-$obj = pick_random( $objects );
+//$obj = pick_random( $objects );
 $make_obj = pick_random( $make_objs );
 
 // Pluralization
-if( $qty != 'a' && $qty != 'every' && $qty != 'his' && $qty != 'your' ) {
-    $obj .= 's';
-}
+//if( $qty != 'a' && $qty != 'every' && $qty != 'his' && $qty != 'your' ) {
+//    $obj .= 's';
+//}
 
-$complex_trump = $subj . " " . $verb . " " . $qty . " " . $adj . " " . $obj . ".";
+//$complex_trump = $subj . " " . $verb . " " . $qty . " " . $adj . " " . $obj . ".";
 $trump_makes = $subj . ' makes ' . $make_obj . ' ' . "<span>$adj</span>" . ' again.';
 ?>
 

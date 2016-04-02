@@ -86,115 +86,87 @@ $styles = array( 'bold', 'italic', 'underline', 'uppercase' );
 
 $bg_funcs = array( 'circles', 'boxes', 'hstripes', 'vstripes' );
 
-// Random sentence
-$fragments = array(
-    'ate your sandwich',
-    'wrote you a love/hate song',
-    'called your mom\'s cellphone',
-    'borrowed your comb'
-);
-
+/**
+ * Sentence Parts
+ */
 $subjects = array( 
     'Donald', 
     'The Donald', 
     'Donald Trump', 
-    'Trump', 
-    'Drumpf', 
+    'Trump',  
     'The Trumpinator',
-);
-$verbs = array(
-    'wants',
-    'needs',
-    'eats',
-    'likes',
-    'loves',
-    'hates',
-    'kicks',
-    'yells at',
-    'discourages',
-    'fires',
-    'smells',
-    'laughs at',
-    'shows off',
-    'borrows',
-    'lends',
-    'has',
-    'makes',
-    'becomes',
-    'resigns',
-    'destroys'
-);
-$quantities = array(
-    'a',
-    'two',
-    'three',
-    'five',
-    'ten',
-    'fifty',
-    'one hundred',
-    'five hundred',
-    'one thousand',
-    'five thousand',
-    'a million',
-    'a billion',
-    'a trillion',
-    'a gazillion',
-    'all',
-    'every',
-    'some',
-    'a bunch of',
-    'his',
-    'your'
+    'Drumpf',
+    'A man with surprisingly small hands'
 );
 $adjectives = array(
-    'YUGE',
-    'ugly',
-    'fat',
-    'lazy',
-    'greedy',
-    'rich',
-    'new',
-    'old',
-    'perfect',
-    'terrible',
-    'hot',
-    'crappy',
-    'great',
-    'stupid'
-);
-$objects = array(
-    'building',
-    'real estate',
-    'mom',
-    'Mexican',
-    'Muslim',
-    'himself',
-    'sandwich',
-    'comb',
-    'money',
-    'bicycle',
-    'junk in the trunk',
-    'pizza',
-    'bath',
-    'America',
-    'clown'
+    
+    /* A */ 'American','aggressive','able','available',
+    /* B */ 'big','black','blue','bad','the best','better',
+    /* C */ 'clear','certain','current','common','central','close','cold','cool','classy','cultural','crazy',
+    /* D */ 'different','difficult','dead','Democratic','dark',
+    /* E */ 'early','economic','easy','environmental',
+    /* F */ 'fat','free','federal','full','foreign','fine','financial','final',
+    /* G */ 'great','good','green','gray','general',
+    /* H */ 'hot','high','human','hard','happy','huge',
+    /* I */ 'indigo','important','international',
+    /* J */ 'just','jealous','justified',
+    /* K */ 'killer','kick-ass',
+    /* L */ 'lazy','large','long','little','low','local','late','legal',
+    /* M */ 'major','military-like','medical','modern','matter',
+    /* N */ 'new','national','narrow-minded','natural','nice',
+    /* O */ 'old','orange','open-minded','open',
+    /* P */ 'perfect','purple','political','public','possible','personal','private','poor','physical','plain','popular',
+    /* Q */ 'quiet','quick','quality',
+    /* R */ 'rich','red','real','right','recent','retro','ready','Republican','religious',
+    /* S1 */ 'small','social','sure','strong','special','serious','short','single','significant',
+    /* S2 */ 'similar','simple','sexy','smart',
+    /* T */ 'tiny','the only one','true','traditional','trendy',
+    /* U */ 'ugly','upset',
+    /* V */ 'violet','vintage',
+    /* W */ 'white','wild','white','whole','wrong',
+    /* X */ 'xtreme',
+    /* Y */ 'YUUUUGE','young','yellow',
+    /* Z */ 'zippy','zoological',
+    /* Phrases */ 'a blast from the past','a cacophony of sites and sounds','the real deal','the main thing',
+    // Negatives 'crappy','greedy','stupid','terrible','violent','xenophobic',
+    
 );
 $make_objs = array(
-    'buildings',
-    'real estate',
-    'your mom',
-    'Mexicans',
-    'Muslims',
-    'himself',
-    'sandwiches',
-    'combs',
-    'money',
-    'bicycles',
+    
+    // Possessives
+    'himself','your mom','his hands','his hair',
+    
+    // People (names)
+    'Ted Cruz','Hillary Clinton','Bernie Sanders','the GOP','Fox News','CNN',
+    
+    // People (fictional)
+    'Batman','Superman','Jedi','Ninja Turtles','The Avengers',
+    
+    // People (categories)
+    'Mexicans','Muslims','clowns','moguls','immigrants','celebrities','Americans',
+    
+    // Places (names)
+    'America','Washington','Mexico','Canada','The Wall','America\'s borders','China','North Korea','South Korea',
+    
+    // Places (things)
+    'buildings','real estate',
+    
+    // Animals
+    'lions','tigers','bears','lion and tigers and bears','eagles','elephants','Australian kangaroos',
+    'dinosaurs','robots','aliens',
+    
+    // Food
+    'sandwiches','pizzas',
+    
+    // Objects
+    'combs','money','bicycles','baths','hands','combovers',
+    
+    // Slang
     'junk in the trunk',
-    'pizzas',
-    'baths',
-    'America',
-    'clowns'
+    
+    // Other
+    'plants','zombies','Star Wars',
+     
 );
 
 /**
@@ -211,7 +183,7 @@ $images = array(
     'lookdown',
     'ofcourse',
     'ohyeah',
-    'realf',
+    'realf',        // http://www.mirror.co.uk/news/world-news/anti-donald-trump-graffiti-wittiest-7156998
     'scoff',
     'seriously',
     'sing',
@@ -222,3 +194,30 @@ $images = array(
     'yo',
     'youidiot'
 );
+
+/**
+ * Deprecated
+ *
+ 
+// Random sentence
+$fragments = array(
+    'ate your sandwich',
+    'wrote you a love/hate song',
+    'called your mom\'s cellphone',
+    'borrowed your comb'
+);
+$verbs = array(
+    'wants','needs','eats','likes','loves','hates','kicks','yells at','discourages','destroys',
+    'fires','smells','laughs at','shows off','borrows','lends','has','makes','becomes','resigns',
+);
+$quantities = array(
+    'a','two','three','five','ten','fifty',
+    'one hundred','five hundred','one thousand','five thousand',
+    'a million','a billion','a trillion','a gazillion',
+    'all','every','some','a bunch of','his','your'
+);
+$objects = array(
+    'building','real estate','mom','Mexican','Muslim','himself','sandwich',
+    'comb','money','bicycle','junk in the trunk','pizza','bath','America','clown'
+);
+*/
