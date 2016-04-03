@@ -95,38 +95,39 @@ $subjects = array(
     'Donald Trump', 
     'Trump',  
     'The Trumpinator',
-    'Drumpf',
-    'A man with surprisingly small hands'
+    // 'Drumpf',
+    // 'A man with surprisingly small hands'
 );
 $adjectives = array(
     
-    /* A */ 'American','aggressive','able','available',
-    /* B */ 'big','black','blue','bad','the best','better',
+    // Page @link: http://www.momswhothink.com/reading/adjectives-that-start-with-a-to-z-list.html
+    /* A */ 'American','aggressive','able','available','absurd','acceptable','accessible','adored','amazing','anxious',
+    /* B */ 'big','black','blue','bad','the best','better','boring','busy','biodegradable','bewildered','beautiful',
     /* C */ 'clear','certain','current','common','central','close','cold','cool','classy','cultural','crazy',
-    /* D */ 'different','difficult','dead','Democratic','dark',
-    /* E */ 'early','economic','easy','environmental',
-    /* F */ 'fat','free','federal','full','foreign','fine','financial','final',
-    /* G */ 'great','good','green','gray','general',
-    /* H */ 'hot','high','human','hard','happy','huge',
-    /* I */ 'indigo','important','international',
-    /* J */ 'just','jealous','justified',
-    /* K */ 'killer','kick-ass',
-    /* L */ 'lazy','large','long','little','low','local','late','legal',
-    /* M */ 'major','military-like','medical','modern','matter',
-    /* N */ 'new','national','narrow-minded','natural','nice',
-    /* O */ 'old','orange','open-minded','open',
-    /* P */ 'perfect','purple','political','public','possible','personal','private','poor','physical','plain','popular',
-    /* Q */ 'quiet','quick','quality',
-    /* R */ 'rich','red','real','right','recent','retro','ready','Republican','religious',
-    /* S1 */ 'small','social','sure','strong','special','serious','short','single','significant',
-    /* S2 */ 'similar','simple','sexy','smart',
-    /* T */ 'tiny','the only one','true','traditional','trendy',
-    /* U */ 'ugly','upset',
-    /* V */ 'violet','vintage',
-    /* W */ 'white','wild','white','whole','wrong',
+    /* D */ 'different','difficult','dead','Democratic','dark','dazzling','drunk','dynamic','dizzy','disguised',
+    /* E */ 'early','economic','easy','environmental','exotic','extra-small','extra-yuge','experts','excellent',
+    /* F */ 'fat','free','federal','full','foreign','fine','financial','final','fabulous','fantastic','fake','fancy',
+    /* G */ 'great','good','green','gray','general','giddy','glamorous','gleeful','grumpy','grand','good-natured',
+    /* H */ 'hot','high','human','hard','happy','huge','historical','honorable','hopeful','humming','hungry','honest',
+    /* I */ 'indigo','important','international','imported','incredible','infamous','itchy','informal','impossible',
+    /* J */ 'just','jealous','justified','jaded','jam-packed','jolly','joyful','jazzy','jumbled','jumpy','jobless',
+    /* K */ 'killer','kick-ass','keen','kind','kindhearted','klutzy','knowing','knowledgeable','kooky','kosher',
+    /* L */ 'lazy','large','long','little','low','local','late','legal','likeable','lonely','lost','loud','lucky',
+    /* M */ 'major','military-like','medical','modern','matter','metallic','merry','mediocre','macho','multicolored',
+    /* N */ 'new','national','narrow-minded','natural','nice','nutty','nutritious','neighborly','noisy','nifty','nocturnal',
+    /* O */ 'old','orange','open-minded','open','odd','old-fashioned','ornate','outlandish','overcooked','orderly',
+    /* P */ 'perfect','purple','political','public','possible','personal','private','poor','puffy','plain','popular',
+    /* Q */ 'quiet','quick','quality','quaint','qualified','quick-witted','quirky','quixotic','quizzical','questionable',
+    /* R */ 'rich','red','real','right','recent','retro','ready','Republican','religious','reasonable','rambunctious',
+    /* S1 */ 'small','social','sure','strong','special','serious','short','single','significant','sad','sleepy',
+    /* S2 */ 'similar','simple','sexy','smart','smooth','spirited','soulful','spooky','starry-eyed','swanky','sweaty',
+    /* T */ 'tiny','the only one','true','traditional','trendy','tranquil','tightfisted','thrifty','teeny-tiny','tasty',
+    /* U */ 'ugly','upset','ubiquitous','uncommon','unique','unusual','unknown','upbeat','useful','useless','understood',
+    /* V */ 'vintage','valuable','visible','victorious',
+    /* W */ 'white','wild','white','whole','wrong','waterlogged','wealthy','wide-eyed','womanly','wistful','witty',
     /* X */ 'xtreme',
-    /* Y */ 'YUUUUGE','young','yellow',
-    /* Z */ 'zippy','zoological',
+    /* Y */ 'YUUUUGE','young','yellow','yummy',
+    /* Z */ 'zippy','zoological','zesty','zany',
     /* Phrases */ 'a blast from the past','a cacophony of sites and sounds','the real deal','the main thing',
     // Negatives 'crappy','greedy','stupid','terrible','violent','xenophobic',
     
@@ -134,13 +135,13 @@ $adjectives = array(
 $make_objs = array(
     
     // Possessives
-    'himself','your mom','his hands','his hair',
+    'himself','his hands','his hair','your mom',
     
     // People (names)
     'Ted Cruz','Hillary Clinton','Bernie Sanders','the GOP','Fox News','CNN',
     
     // People (fictional)
-    'Batman','Superman','Jedi','Ninja Turtles','The Avengers',
+    'Batman','Superman','Jedi','Ninja Turtles','The Avengers','The Terminator',
     
     // People (categories)
     'Mexicans','Muslims','clowns','moguls','immigrants','celebrities','Americans',
@@ -152,7 +153,7 @@ $make_objs = array(
     'buildings','real estate',
     
     // Animals
-    'lions','tigers','bears','lion and tigers and bears','eagles','elephants','Australian kangaroos',
+    'lions','tigers','bears','lions and tigers and bears','eagles','elephants','Australian kangaroos',
     'dinosaurs','robots','aliens',
     
     // Food
@@ -167,6 +168,41 @@ $make_objs = array(
     // Other
     'plants','zombies','Star Wars',
      
+);
+
+/**
+ * Donald's Dictionary words (from NY Magazine)
+ *
+ * @link    http://nymag.com/daily/intelligencer/2015/08/donalds-dictionary.html
+ */
+$trump_adjs = array(
+    'amazing','a fantastic deal','a failure','a terrific success','just incredible','a major loser','a buffoon',
+    'low-energy','a clown','the worst','the best','better','worse','good','bad','civil','classy','excellent',
+    'deviant','great','fantastic','disgusting','super-luxury','cheaters','Republican','Democratic','liberal',
+    'conservative','weak','get schlonged','great again','huge','hugely classy','impossible to ignore','in such trouble',
+    'hairy','a bimbo','lightweight','losers','valuable','lovely','expensive','big and beautiful','get fired',
+    'morons','wonderful','orange','yellow','comb their hair over','overrated','original','think they are clever',
+    'disagreeable','agreeable','superior','very obnoxious','loud','get "roughed up"','highly respected','sweaty',
+    'weak like a baby','registered independents','slobs','something terrific','boycott-able','super-super-luxury',
+    'unbelievable','believable but also amazing','total losers','the healthiest ever','tremendous','sublime',
+    'the very definition of the American success story','bedazzled','the greatest ever','the greatest of all time',
+    'worth billions of dollars','ugly','very pro-choice','very, very strong','super-premium','a failed business idea',
+    'a war hero','a bad idea','acceptable','much better than most people think','tough','go wherever','whine',
+    '"winning"','monotonous','not boring','"Yes Men"','zeroes',
+);
+$trump_objs = array(
+    'Roger Ailes','The Art of the Deal','bankruptcy','Batman','belt buckles','the Bible','his brand',
+    'Russell Brand','George Bush','the President','the POTUS','Jeb Bush','Ben Carson','China','Citizen Kane',
+    'campaign contributions','Hillary Clinton','clowns','Ted Cruz','his daughter','debates','the Democratic Party',
+    'Democrats','the GOP','the Republicans','the Republican party','Matt Drudge','The Drudge Report','his ego',
+    'English','Fox News','going to the bathroom','golf','athletes','great guys','his hair','haters and losers',
+    'Head &amp; Shoulders','illegals','undocumented immigrants','The Wall','Alex Jones',
+    'journalists who write about Donald Trump','Megyn Kelly','"Merry Christmas"','Mexicans','Mexico',
+    'the Miss Universe Pageant','Monopoly the Game','Trump the Game','Muslims','New Jersey','New York Daily News',
+    'Barack Obama','Robert Pattinson','Kristen Stewart','people who tweet about him','political donations',
+    'the polls','protesters','Vladimir Putin','quotes','real estate','tall buildings','refugees','FDR','Marco Rubio',
+    'space','Starbucks','Apple','tweets','himself','billions of dollars','his net worth','vodka','the War in Iraq',
+    'Washington','Kanye West','the Wharton School of Finance','women',
 );
 
 /**

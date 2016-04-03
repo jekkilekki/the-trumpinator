@@ -1,14 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-main {
+
+/*
+ * About Page
+ */
+#about_page {
+    background: rgba( 0,0,0,0.8 );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 50px;
+    z-index: 99999;
+}
+#about_box {
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 0 auto;
+    border: 3px solid;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+}
+#about_box h1 {
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+#about_box p {
+    margin-bottom: 15px;
+}
+#about_box li {
+    margin-left: 25px;
+}
+
+/*
+ * Main Page
+ */
+#dons_dic {
+    position: absolute;
+    top: 50px;
+    left: -80px;
+    width: 300px;
+    transform: rotate(-45deg);
+    padding: 5px 50px;
+    z-index: 9999;
+    text-align: center;
+    box-shadow: 2px 2px 3px black;
+}
+#dons_dic input {
+    background: transparent;
+    outline: 0;
+    border: 1px solid;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 0.75em;
+}
+#dons_dic input:hover {
+    box-shadow: 2px 2px 7px black;
+}
+main#content {
     margin: 0;
     padding: 0px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+/*    position: relative;*/
+}
+#inator {
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50% );
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
 }
 .object {
     position: absolute;
@@ -22,16 +100,16 @@ h1 {
     font-size: 36px;
 }
 h1 span {
-    margin: 0 20px;
+    margin: 0 25px;
 }
-p {
+main p {
     position: relative;
     text-align: center;
-    width: 50%;
+    width: 75%;
     margin: 50px auto;
     z-index: 999;
 }
-a {
+main a {
     text-decoration: none;
 }
 p span {
@@ -46,7 +124,7 @@ p span {
     padding: 0;
     background: white;
     padding: 10px;
-    border: 20px solid goldenrod;
+    border: 25px solid goldenrod;
     box-shadow: 2px 2px 7px black;
 }
 #profile img {
@@ -59,4 +137,124 @@ figcaption {
     padding: 5px;
     text-align: center;
     background: #d8d8d8;
+}
+.adsbygoogle {
+    display: block!important;
+    margin: 0 auto;
+}
+
+/*
+ * Page Styles
+ */
+#page {
+    padding: 50px;
+    position: relative;
+    z-index: 9999;
+}
+#disclaimer {
+    box-shadow: 2px 2px 7px black;
+    padding: 50px;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+#stuff {
+    display: flex;
+    text-align: center;
+}
+#stuff ul {
+    list-style-type: none;
+    padding: 25px;
+}
+#stuff li {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+}
+#stuff li img {
+    width: 100%;
+}
+#pro {
+    width: 50%;
+}
+#anti {
+    width: 50%;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+}
+footer hr {
+    margin: 15px;
+}
+footer span {
+    font-size: 0.6em;
+}
+
+/*
+ * Visibility classes
+ */
+@media screen and ( max-width: 600px ) {
+    main {
+        border-width: 25px!important;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    h1 span {
+        margin: 0 10px;
+    }
+    main p {
+        font-size: 1.8em!important;
+    }
+    figure {
+        border-width: 10px!important;
+        padding: 5px!important;
+    }
+    figcaption {
+        font-size: 0.7em;
+    }
+    .hide-for-small {
+        display: none!important;
+    }
+    #page {
+        padding: 25px;
+    }
+    #stuff {
+        display: block;
+    }
+    #stuff h2 {
+        padding-bottom: 15px;
+    }
+    #stuff ul {
+        padding: 0px;
+    }
+    #pro, #anti {
+        width: 100%!important;
+        display: block;
+    }
+    #pro {
+        border-right: 0!important;
+        border-bottom: 3px dashed;
+    }
+    #anti {
+        border-left: 0!important;
+        border-top: 3px dashed;
+        padding-top: 25px;
+    }
+    #disclaimer {
+        font-size: 1em;
+    }
+    footer {
+        font-size: 0.8em;
+    }
+}
+@media screen and ( max-width: 800px ) {
+    .hide-for-medium {
+        display: none!important;
+    }
+    h1 span {
+        margin: 0 20px;
+    }
 }
