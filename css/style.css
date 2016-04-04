@@ -83,7 +83,7 @@ main#content {
 #inator {
     position: absolute;
     top: 50%;
-    transform: translateY( -50% );
+    transform: translateY( -45% );
     width: 100%;
     box-sizing: border-box;
     left: 0;
@@ -102,7 +102,7 @@ h1 {
 h1 span {
     margin: 0 25px;
 }
-main p {
+main #sentence {
     position: relative;
     text-align: center;
     width: 75%;
@@ -112,8 +112,11 @@ main p {
 main a {
     text-decoration: none;
 }
-p span {
+#sentence span {
     font-family: 'Lobster';
+}
+#sentence .fa {
+    font-size: 50%;
 }
 #profile {
     position: relative;

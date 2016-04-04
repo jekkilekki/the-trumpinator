@@ -5,14 +5,14 @@
 
 session_start();
 
-if( isset( $_POST[ 'donalds_dictionary' ] ) ) {
-    $_SESSION[ 'donalds_dictionary' ] = $_POST[ 'donalds_dictionary' ];
+if( isset( $_POST[ 'dictionary' ] ) ) {
+    $_SESSION[ 'dictionary' ] = $_POST[ 'dictionary' ];
 } else {
-    $_SESSION[ 'donalds_dictionary' ] = '';
+    $_SESSION[ 'dictionary' ] = '';
 }
 
-include_once( 'functions.php' );
-include_once( 'lists.php' );
+include_once( 'inc/functions.php' );
+include_once( 'inc/lists.php' );
 
 /**
  * Set up variables for use on the site
@@ -20,7 +20,7 @@ include_once( 'lists.php' );
 $colors = get_colors( $america_palettes );
 
 $font_family = pick_random( $fonts );
-$font_size = rand( 50, 80 );
+$font_size = rand( 50, 72 );
 $style = pick_random( $styles );
 
 // Default sentence constructors
@@ -32,7 +32,7 @@ $make_obj = pick_random( $make_objs );
 $trump_obj = pick_random( $trump_objs );
 $trump_adj = pick_random( $trump_adjs );
 
-if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
+if ( $_SESSION[ 'dictionary' ] == '' ) {
     $trump_makes = $subj . ' makes ' . $make_obj . ' ' . "<span>$adj</span>" . ' again!';
 } else {
     $trump_makes = $subj . ' makes ' . $trump_obj . ' ' . "<span>$trump_adj</span>" . ' again!';
@@ -46,7 +46,7 @@ if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=<?= $font_family; ?>">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Trumpinator!!!</title>
     <style type="text/css">
@@ -122,10 +122,10 @@ if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
         <form action="?" method="GET">
             Use
             <?php
-            if ( !isset( $_SESSION[ 'donalds_dictionary' ] ) ) {
-                echo '<input id="ddic" type="submit" name="donalds_dictionary" value="Donald\'s Dictionary">';
+            if ( !isset( $_SESSION[ 'dictionary' ] ) || $_SESSION[ 'dictionary' ] == '' ) {
+                echo '<input id="ddic" type="submit" name="dictionary" value="Donald\'s Dictionary">';
             } else {
-                echo '<input id="ddic" type="submit" name="default" value="the Default">';
+                echo '<input id="ddic" type="submit" name="dictionary" value="the Default">';
             }
             ?>
         </form>
@@ -145,21 +145,22 @@ if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
             <i class="fa fa-bars hide-for-small hide-for-medium"></i>
         </h1>
         <div id="inator">
-            <figure id="profile">
-                <img src="img/trump_<?= pick_random( $images ); ?>.jpg">
-                <figcaption>Picture source:</figcaption>
-            </figure>
-            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?></a></p>
+            
+            <?= create_random_image( $images_cc ); ?>
+            
+            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?> <i class="fa fa-refresh"></i></a></p>
         </div>
     </main>
     <aside id="page">
         <div id="disclaimer">
             <p>
-                Love him or hate him, there's no denying that Donald Trump is the YUGEST name in American
-                politics right now. And his campaign slogan "Make America Great Again" is equally amazing. 
-                So, in the spirit of fun, I've built this site to throw together a random collection
-                of adjectives and objects to create entirely NEW phrases to show exactly WHAT impact Trump
-                is having on America. Enjoy!
+                Love him or hate him, there's no denying that Donald Trump is 
+                the YUGEST name in American politics right now. And his 
+                campaign slogan "Make America Great Again" is equally amazing. 
+                So, in the spirit of fun, I've built this site to throw together 
+                a random collection of adjectives and objects to create entirely 
+                NEW phrases to show exactly WHAT impact Trump is having on America. 
+                Enjoy!
             </p>
         </div>
         <div id="stuff">
@@ -191,11 +192,12 @@ if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
         Full disclosure: The above are Amazon affiliate links. If you use my link to shop on Amazon, I'll get a small commission.
         <hr>
         <span><!-- &copy; 2016 Aaron Snowberger | -->
-            <a class="about_link" href="#">About this Site</a>
+            <a class="about_link" href="#">About this Site</a> | 
+            <a href="http://nymag.com/daily/intelligencer/2015/08/donalds-dictionary.html">Words in Donald's Dictionary</a>
         </span>
     </footer>
     
-    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Trumpinator -->
     <ins class="adsbygoogle"

@@ -247,3 +247,29 @@ function create_hstripes( $num_objs, $color ) {
     return $output;
     
 }
+
+/**
+ * Output Random Trump image
+ */
+function create_random_image( $array ) {
+    
+    $key = array_rand( $array );
+    $value = $array[ $key ];
+    $output = '';
+    
+    $output .= '<figure id="profile">';
+    $output .= "<img src='img/trump_cc_$key.jpg'>";
+    $output .= "<figcaption>Image credit: <a href='$value[1]'>$value[0]</a></figcaption>";
+    $output .= '</figure>';
+    
+    return $output;
+    
+    /*
+     * Deprecated old HTML code
+     *
+     <figure id="profile">
+        <img src="img/trump_<?= pick_random( $images ); ?>.jpg">
+        <figcaption>Picture source:</figcaption>
+    </figure>
+    */
+}

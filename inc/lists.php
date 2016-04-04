@@ -232,6 +232,43 @@ $images = array(
 );
 
 /**
+ * Creative Commons Trump images
+ */
+$images_cc = array( 
+    'wired'     => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(23691565882).jpg' ),
+    'mesa'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Trump_rally_in_Mesa,_Arizona.jpg' ),
+    'hifive'    => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_at_CPAC_2014_(1).jpg' ),
+    'teareyed'  => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_at_CPAC_2014_(4).jpg' ),
+    'two'       => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(8567813820)_(2).jpg' ),
+    'four'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_at_CPAC_2014_(2).jpg' ),
+    'five'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(5440394763).jpg' ),
+    'downnose'  => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(24949501440).jpg' ),
+    'smug'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(25218730016).jpg' ),
+    'sh'        => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(24949307320).jpg' ),
+    'out'       => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(24949318110).jpg' ),
+    'yes'       => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Trump_CPAC_2011.jpg' ),
+    'point'     => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Trump_CPAC_2011.jpg' ),
+    'so'        => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(5440995138).jpg' ),
+    'ofcourse'  => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_by_Gage_Skidmore_2.jpg' ),
+    'yell'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_closeup.jpg' ),
+    'smeyes'    => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(5440606864).jpg' ),
+    'whynot'    => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(8567822300).jpg' ),
+    'good'      => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_(5440393129).jpg' ),
+    'thankyou'  => array( 'Gage Skidmore', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_at_CPAC_2014_(3).jpg' ),
+    'th'        => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Mr_Donald_Trump_New_Hampshire_Town_Hall_on_August_19th,_2015_at_Pinkerton_Academy_in_Derry,_NH_by_Michael_Vadon_06.jpg' ),
+    'i'         => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_in_April_2015.jpg' ),
+    'jeff'      => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_Sr._at_Citizens_United_Freedom_Summit_in_Greenville_South_Carolina_May_2015_by_Michael_Vadon_13.jpg' ),
+    'townhall'  => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Mr_Donald_Trump_New_Hampshire_Town_Hall_on_August_19th,_2015_at_Pinkerton_Academy_in_Derry,_NH_by_Michael_Vadon_12.jpg' ),
+    'smile'     => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Mr_Donald_Trump_New_Hampshire_Town_Hall_on_August_19th_2015_at_Pinkerton_Academy_in_Derry,_NH_by_Michael_Vadon_07.jpg' ),
+    'hey'       => array( 'Michael Vadon', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_Signs_The_Pledge_19.jpg' ),
+    'look'      => array( 'Max Goldberg', 'https://commons.wikimedia.org/wiki/File:Donald_Drumpf.jpg' ),
+    'what'      => array( 'Marc Nozell', 'https://commons.wikimedia.org/wiki/File:Trump_speaking_in_Manchester,_New_Hampshire.jpg' ),
+    'bigsmile'  => array( 'Marc Nozell', 'https://commons.wikimedia.org/wiki/File:Trump_smiling_with_eyes_closed.jpg' ),
+    'thumbsup'  => array( 'Marc Nozell', 'https://commons.wikimedia.org/wiki/File:Donald_Trump_Approves_2016.jpg' ),
+    
+);
+
+/**
  * Deprecated
  *
  
