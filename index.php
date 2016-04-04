@@ -149,7 +149,7 @@ if ( $_SESSION[ 'donalds_dictionary' ] == '' ) {
                 <img src="img/trump_<?= pick_random( $images ); ?>.jpg">
                 <figcaption>Picture source:</figcaption>
             </figure>
-            <p><a href=""><?= ucfirst( $trump_makes ); ?></a></p>
+            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?></a></p>
         </div>
     </main>
     <aside id="page">

@@ -250,7 +250,7 @@ footer span {
         font-size: 0.8em;
     }
 }
-@media screen and ( max-width: 800px ) {
+@media screen and ( max-width: 900px ) {
     .hide-for-medium {
         display: none!important;
     }
