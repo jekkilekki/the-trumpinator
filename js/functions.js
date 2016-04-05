@@ -34,6 +34,7 @@ function windowControl() {
         document.getElementById( 'profile' ).style.float = "left";
         document.getElementById( 'sentence' ).style.float = "left";
         document.getElementById( 'profile' ).style.marginLeft = "12%";
+        document.getElementById( 'profile' ).style.marginTop = "5%";
         document.getElementById( 'sentence' ).style.marginLeft = "6%";
     } else {
         document.getElementById( 'profile' ).style.width = "50%";

@@ -114,6 +114,11 @@ h1 .about {
 h1 .about a {
     text-decoration: underline;
 }
+.figure_container, .sentence_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main #sentence {
     position: relative;
     text-align: center;
