@@ -37,8 +37,11 @@ and not to be taken too seriously.
 ### Screenshots
 
 Portrait:
+
 ![ipad-screenshot](https://cloud.githubusercontent.com/assets/6644259/14300291/833475ac-fbca-11e5-86e1-f2972cce060b.png)
+
 Landscape:
+
 ![landscape-screenshot](https://cloud.githubusercontent.com/assets/6644259/14300296/8bb730a2-fbca-11e5-90a7-1b1461ec18fa.png)
 
 ### Acknowledgements
