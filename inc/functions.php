@@ -79,7 +79,7 @@ function pick_random_and_remove( &$array ) {
 /**
  * Set colors
  */
-function get_colors( $array ) {
+function get_colors( $array, &$palette_name ) {
     // $color_array = array();
     
     $palette = pick_random( $array );

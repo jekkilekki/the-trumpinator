@@ -5,9 +5,9 @@
 
 session_start();
 
-if( isset( $_GET[ 'dictionary' ] ) && $_GET[ 'dictionary' ] == 'Donald%27s+Dictionary' ) {
+if( isset( $_GET[ 'dictionary' ] ) && $_GET[ 'dictionary' ] == "Donald's Dictionary" ) {
     $_SESSION[ 'dictionary' ] = 'donald';
-} elseif( $_GET[ 'dictionary' ] == 'the+Default' ) {
+} else {
     $_SESSION[ 'dictionary' ] = '';
 }
 
@@ -17,7 +17,8 @@ include_once( 'inc/lists.php' );
 /**
  * Set up variables for use on the site
  */
-$colors = get_colors( $america_palettes );
+$palette_name = '';
+$colors = get_colors( $america_palettes, $palette_name );
 
 $font_family = pick_random( $fonts );
 $font_size = rand( 50, 72 );
@@ -48,6 +49,27 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <title>Trumpinator!!!</title>
     <style type="text/css">
         body {
@@ -66,7 +88,10 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
         h1 {
             background: <?= $colors[4]; ?>;
         }
-        main p {
+        h1 .about, h1 .about a {
+            color: <?= $colors[1]; ?>;
+        }
+        main #sentence {
             font-size: <?= $font_size ?>px;
         }
         h1, h2, h3, h4, h5, h6, p, footer, #dons_dic, #dons_dic input, ul {
@@ -79,7 +104,7 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
         a {
             color: <?= $colors[3]; ?>;
         }
-        main p span {
+        main #sentence span {
             color: <?= $colors[4]; ?>;
             <?php 
             switch( $style ) {
@@ -97,6 +122,9 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
                     break;
             }
             ?>
+        }
+        main #sentence .fa {
+            color: <?= $colors[2]; ?>;
         }
         #page, #about_box {
             background: <?= $colors[4]; ?>;
@@ -132,7 +160,7 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
     
     <?= create_bg( $bg_funcs, $colors[1] ); ?>
     <main id="content">
-        <h1 id="title" class="about_link">
+        <h1 id="title">
             <i class="fa fa-bars hide-for-small hide-for-medium"></i>
             <i class="fa fa-star hide-for-small hide-for-medium"></i>
             <i class="fa fa-star hide-for-small"></i>
@@ -142,18 +170,22 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
             <i class="fa fa-star hide-for-small"></i>
             <i class="fa fa-star hide-for-small hide-for-medium"></i>
             <i class="fa fa-bars hide-for-small hide-for-medium"></i>
+            <span class="about">Using: 
+                <?php
+                if( $_SESSION[ 'dictionary' ] == 'donald' ) {
+                    echo " <a href='http://nymag.com/daily/intelligencer/2015/08/donalds-dictionary.html'>Donald's Dictionary</a>";
+                } else {
+                    echo " the Default dictionary";
+                }
+                ?>
+                | <a href="#" class="about_link">About this site</a>
+            </span>
         </h1>
         <div id="inator">
             
             <?= create_random_image( $images_cc ); ?>
             
-            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?> <i class="fa fa-refresh"></i>
-                <?php 
-                echo "<pre>Session "; var_dump( $_SESSION ); 
-                echo 'Get '; var_dump( $_GET );
-                echo 'Post '; var_dump( $_POST );
-                echo "</pre>"; ?>
-                </a></p>
+            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?> <i class="fa fa-refresh"></i></a></p>
         </div>
     </main>
     <aside id="page">
@@ -203,6 +235,7 @@ if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
     </footer>
     
     <script type="text/javascript" src="js/functions.js"></script>
+    
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Trumpinator -->
     <ins class="adsbygoogle"

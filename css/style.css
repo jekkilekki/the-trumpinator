@@ -102,6 +102,18 @@ h1 {
 h1 span {
     margin: 0 25px;
 }
+h1 .about {
+    position: absolute;
+    bottom: 15px;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+}
+h1 .about a {
+    text-decoration: underline;
+}
 main #sentence {
     position: relative;
     text-align: center;
@@ -117,6 +129,9 @@ main a {
 }
 #sentence .fa {
     font-size: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
 }
 #profile {
     position: relative;
@@ -127,7 +142,7 @@ main a {
     padding: 0;
     background: white;
     padding: 10px;
-    border: 25px solid goldenrod;
+    border: 25px inset burlywood;
     box-shadow: 2px 2px 7px black;
 }
 #profile img {
@@ -140,6 +155,7 @@ figcaption {
     padding: 5px;
     text-align: center;
     background: #d8d8d8;
+    font-size: 0.8em;
 }
 .adsbygoogle {
     display: block!important;
@@ -192,7 +208,7 @@ footer hr {
     margin: 15px;
 }
 footer span {
-    font-size: 0.6em;
+    font-size: 12px;
 }
 
 /*
@@ -208,8 +224,23 @@ footer span {
     h1 span {
         margin: 0 10px;
     }
-    main p {
+    h1 .about {
+        bottom: 5px;
+        font-size: 10px;
+    }
+    .object {
+        opacity: 0.2!important;
+    }
+    #dons_dic {
+        font-size: 12px;
+        top: 40px;
+        left: -100px;
+    }
+    main #sentence {
         font-size: 1.8em!important;
+    }
+    main #sentence .fa {
+        bottom: -25px;
     }
     figure {
         border-width: 10px!important;
@@ -250,6 +281,21 @@ footer span {
         font-size: 1em;
     }
     footer {
+        font-size: 0.8em;
+    }
+    footer span {
+        font-size: 10px;
+    }
+    
+    #about_page {
+        padding: 25px;
+    }
+    #about_page h1 {
+        margin-bottom: 15px;
+    }
+    #about_box {
+        width: 90%;
+        padding: 25px;
         font-size: 0.8em;
     }
 }
