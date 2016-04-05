@@ -5,10 +5,16 @@
 
 session_start();
 
-if( isset( $_POST[ 'dictionary' ] ) ) {
-    $_SESSION[ 'dictionary' ] = $_POST[ 'dictionary' ];
+if( isset( $_GET[ 'dictionary' ] ) ) {
+    $_SESSION[ 'dictionary' ] = $_GET[ 'dictionary' ];
+    if( $_GET[ 'dictionary' ] == 'the Default' ) {
+        $_SESSION[ 'dic_type' ] == 'default';
+    } elseif ( $_GET[ 'dictionary' ] == 'Donald\'s Dictionary' ) {
+        $_SESSION[ 'dic_type' ] == 'donald';
+    }
 } else {
     $_SESSION[ 'dictionary' ] = '';
+    $_SESSION[ 'dic_type' ] = 'default';
 }
 
 include_once( 'inc/functions.php' );
@@ -32,9 +38,9 @@ $make_obj = pick_random( $make_objs );
 $trump_obj = pick_random( $trump_objs );
 $trump_adj = pick_random( $trump_adjs );
 
-if ( $_SESSION[ 'dictionary' ] == '' ) {
+if ( $_SESSION[ 'dic_type' ] == 'default' ) {
     $trump_makes = $subj . ' makes ' . $make_obj . ' ' . "<span>$adj</span>" . ' again!';
-} else {
+} elseif ( $_SESSION[ 'dic_type' ] == 'donald' ) {
     $trump_makes = $subj . ' makes ' . $trump_obj . ' ' . "<span>$trump_adj</span>" . ' again!';
 }
 ?>
@@ -121,13 +127,12 @@ if ( $_SESSION[ 'dictionary' ] == '' ) {
     <div id="dons_dic">
         <form action="?" method="GET">
             Use
-            <?php
-            if ( !isset( $_SESSION[ 'dictionary' ] ) || $_SESSION[ 'dictionary' ] == '' ) {
-                echo '<input id="ddic" type="submit" name="dictionary" value="Donald\'s Dictionary">';
-            } else {
-                echo '<input id="ddic" type="submit" name="dictionary" value="the Default">';
-            }
-            ?>
+            <input id="ddic" type="submit" name="dictionary" value="<?php
+                if ( $_SESSION[ 'dic_type' ] == 'default' ) {
+                    echo 'Donald\'s Dictionary';
+                } elseif ( $_SESSION[ 'dic_type' ] == 'donald' ) {
+                    echo 'the Default';
+                } ?>">
         </form>
     </div>
     
