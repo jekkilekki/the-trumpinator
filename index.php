@@ -5,16 +5,10 @@
 
 session_start();
 
-if( isset( $_GET[ 'dictionary' ] ) ) {
-    $_SESSION[ 'dictionary' ] = $_GET[ 'dictionary' ];
-    if( $_GET[ 'dictionary' ] == 'the Default' ) {
-        $_SESSION[ 'dic_type' ] == 'default';
-    } elseif ( $_GET[ 'dictionary' ] == 'Donald\'s Dictionary' ) {
-        $_SESSION[ 'dic_type' ] == 'donald';
-    }
-} else {
+if( isset( $_GET[ 'dictionary' ] ) && $_GET[ 'dictionary' ] == 'Donald%27s+Dictionary' ) {
+    $_SESSION[ 'dictionary' ] = 'donald';
+} elseif( $_GET[ 'dictionary' ] == 'the+Default' ) {
     $_SESSION[ 'dictionary' ] = '';
-    $_SESSION[ 'dic_type' ] = 'default';
 }
 
 include_once( 'inc/functions.php' );
@@ -38,10 +32,10 @@ $make_obj = pick_random( $make_objs );
 $trump_obj = pick_random( $trump_objs );
 $trump_adj = pick_random( $trump_adjs );
 
-if ( $_SESSION[ 'dic_type' ] == 'default' ) {
-    $trump_makes = $subj . ' makes ' . $make_obj . ' ' . "<span>$adj</span>" . ' again!';
-} elseif ( $_SESSION[ 'dic_type' ] == 'donald' ) {
+if ( $_SESSION[ 'dictionary' ] == 'donald' ) {
     $trump_makes = $subj . ' makes ' . $trump_obj . ' ' . "<span>$trump_adj</span>" . ' again!';
+} else {
+    $trump_makes = $subj . ' makes ' . $make_obj . ' ' . "<span>$adj</span>" . ' again!';
 }
 ?>
 
@@ -128,10 +122,10 @@ if ( $_SESSION[ 'dic_type' ] == 'default' ) {
         <form action="?" method="GET">
             Use
             <input id="ddic" type="submit" name="dictionary" value="<?php
-                if ( $_SESSION[ 'dic_type' ] == 'default' ) {
-                    echo 'Donald\'s Dictionary';
-                } elseif ( $_SESSION[ 'dic_type' ] == 'donald' ) {
-                    echo 'the Default';
+                if( $_SESSION[ 'dictionary' ] == 'donald' ) {
+                    echo "the Default";
+                } else {
+                    echo "Donald's Dictionary";
                 } ?>">
         </form>
     </div>
@@ -153,7 +147,13 @@ if ( $_SESSION[ 'dic_type' ] == 'default' ) {
             
             <?= create_random_image( $images_cc ); ?>
             
-            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?> <i class="fa fa-refresh"></i></a></p>
+            <p id="sentence"><a href=""><?= ucfirst( $trump_makes ); ?> <i class="fa fa-refresh"></i>
+                <?php 
+                echo "<pre>Session "; var_dump( $_SESSION ); 
+                echo 'Get '; var_dump( $_GET );
+                echo 'Post '; var_dump( $_POST );
+                echo "</pre>"; ?>
+                </a></p>
         </div>
     </main>
     <aside id="page">
