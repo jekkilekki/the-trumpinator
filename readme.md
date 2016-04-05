@@ -1,5 +1,7 @@
 # The Trumpinator!
 
+![iphone-screenshot](https://cloud.githubusercontent.com/assets/6644259/14300295/897b2d52-fbca-11e5-99aa-da6f18bf240c.png)
+
 * [Test site](http://www.jekkilekki.com/lab/trumpinator)
 
 Love him or hate him, there's no denying that Donald Trump is the 
@@ -33,6 +35,11 @@ and not to be taken too seriously.
 * [Donald's Dictionary](http://nymag.com/daily/intelligencer/2015/08/donalds-dictionary.html) - words from the NY Magazine article
 
 ### Screenshots
+
+Portrait:
+![ipad-screenshot](https://cloud.githubusercontent.com/assets/6644259/14300291/833475ac-fbca-11e5-86e1-f2972cce060b.png)
+Landscape:
+![landscape-screenshot](https://cloud.githubusercontent.com/assets/6644259/14300296/8bb730a2-fbca-11e5-90a7-1b1461ec18fa.png)
 
 ### Acknowledgements
 
